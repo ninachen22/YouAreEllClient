@@ -33,6 +33,17 @@ public class Message implements Comparable {
         this.toId = "";
     }
 
+    public Message(String message, String toId, String fromId, String timestamp, String seqId) {
+        this.message = message;
+        this.toId = toId;
+        this.fromId = fromId;
+        this.timestamp = timestamp;
+        this.seqId = seqId;
+    }
+
+    public Message() {
+    }
+
     @Override
     public String toString() {
         return "to: " + this.toId + "\nfrom: "+ this.fromId + "\n" + this.message + "\n----\n";
